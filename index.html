@@ -1,115 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link href="styles.css" rel="stylesheet"/>
- </head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Survey Form</h1>
+            <p>Help protect human rights. Thank you for your time!</p>
+        </header>
 
- <body>
-    
-    <header>
-        <h1 id="title">Survey Form</h1>
-        <p id="description">Help protect human rights. Thank you for your time!</p>
-    </header>
- <div id="container">
+        <form id="survey-form">
 
-<form id="survey-form">
-    <label id="name-label" for="name">Name</label>
-    <input 
-    id="name" 
-    type="text"
-    placeholder="eg.Juan Dela Cruz"
-    required
-    />
-    <label id="email-label" for="email">Email</label>
-    <input 
-    id="email" 
-    type="email"
-    name="email"
-    placeholder="eg.you@example.com"
-    required
-    />
-    <label id="number-label" for="number">Enter your Age</label>
-    <input 
-    id="number"
-    type="number"
-    min="1"
-    max="100"
-    placeholder="eg.45"
-    required
-    />
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="eg. Juan Dela Cruz" required>
+            </div>
 
-    <p>Sex</p>
-    <label>
-        <input type="radio" name="sex" value="male">Male
-    </label>
-    <label>
-        <input type="radio" name="sex" value="female">Female
-    </label>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="eg. you@example.com" required>
+            </div>
 
-    <p>Religion</p>
-    <select name="dropdown" id="dropdown">
-        <option value="option 1">Roman Catholic</option>
-        <option value="option 2">Islam</option>
-        <option value="option 3">Iglesia ni Cristo (iNC)</option>
-        <option value="option 4">Jehovah's Witnesses</option>
-        <option value="option 5">Others</option>
-    </select>
+            <!-- Age -->
+            <div class="form-group">
+                <label for="number">Age</label>
+                <input id="number" type="number" min="1" max="100" placeholder="eg. 45" required>
+            </div>
 
-    <p>1. Which human rights issues are you most concerned about?(Select all that applies)</p>
-    <label>
-        <div class="option"> <input type="checkbox" value="option 1" name="Q1O1">Freedom of Speech </div>
-        <div class="option"> <input type="checkbox" value="option 2" name="Q1O2">Discrimination and inequality </div>
-        <div class="option"> <input type="checkbox" value="option 3" name="Q1O3">Child protection </div>
-        <div class="option"> <input type="checkbox" value="option 4" name="Q1O4">Gender based violence </div>
-        <div class="option"> <input type="checkbox" value="option 5" name="Q1O5">Privacy and data protection </div>
-        <div class="option"> <input type="checkbox" value="option 6" name="Q1O6">Access to education </div>
-        <div class="option"> <input type="checkbox" value="option 7" name="Q1O7">Access to healthcare </div>
-        <div class="option"> <input type="checkbox" value="option 8" name="Q1O8">Labor rights and fair wages </div>
-            </label>
+            <!-- Sex -->
+            <div class="form-group question">
+                <label>Sex</label>
+                <label class="option-label"><input type="radio" name="sex" value="male" required>Male</label>
+                <label class="option-label"><input type="radio" name="sex" value="female">Female</label>
+            </div>
 
-    <p>2. In what ways are you willing to participate in protectiong human rights?(Select all that applies)</p>
-    <label>
-        <div class="option"> <input type="checkbox" value="option 1" name="Q2O1">Signing petitions </div>
-        <div class="option"> <input type="checkbox" value="option 2"name="Q2O2">Attending awareness campaigns </div>
-        <div class="option"> <input type="checkbox" value="option 3"name="Q2O3">Donating to human rights organizations </div>
-        <div class="option"> <input type="checkbox" value="option 4"name="Q2O4">Sharing educational content </div>
-        <div class="option"> <input type="checkbox" value="option 5"name="Q2O5">Volounteering for community programs </div>
-        <div class="option"> <input type="checkbox" value="option 6"name="Q2O6">Reporting human rights violations </div>
-    </label>
-    
-    <p>3. What types of suppport do you think communities need the most?(Select all that applies)</p>
-    <label>
-        <div class="option"> <input type="checkbox" value="option 1"name="Q3O1">Legal assistance </div>
-        <div class="option"> <input type="checkbox" value="option 2"name="Q3O2">Mental health support </div>
-        <div class="option"> <input type="checkbox" value="option 3"name="Q3O3">Financial aid </div>
-        <div class="option"> <input type="checkbox" value="option 4"name="Q3O4">Educational programs and workshops </div>
-        <div class="option"> <input type="checkbox" value="option 5"name="Q3O5">Safe spaces/shelters </div>
-        <div class="option"> <input type="checkbox" value="option 6"name="Q3O6">Government transparancy and accountability </div>
-    </label>
-    <p>4. How do you prefer to receive information about human rights?(Select all that applies)</p>
-        <label>
-            <div class="option"> <input type="checkbox" value="option 1"name="Q4O1">Social media posts </div>
-            <div class="option"> <input type="checkbox" value="option 2"name="Q4O2">News articles </div>
-            <div class="option"> <input type="checkbox" value="option 3"name="Q4O3">School or community workshops </div>
-            <div class="option"> <input type="checkbox" value="option 4 "name="Q4O4">Government announcements </div>
-            <div class="option"> <input type="checkbox" value="option 5"name="Q4O5">Online videos or documentaries </div>
-            <div class="option"> <input type="checkbox" value="option 6"name="Q4O6">Podcasts or radio programs </div>
-        </label>
+            <!-- Religion -->
+            <div class="form-group question">
+                <label for="dropdown">Religion</label>
+                <select id="dropdown" name="dropdown">
+                    <option value="Roman Catholic">Roman Catholic</option>
+                    <option value="Islam">Islam</option>
+                    <option value="INC">Iglesia ni Cristo (iNC)</option>
+                    <option value="Jehovah's Witnesses">Jehovah's Witnesses</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
 
-        <p>If you have any inquiries or comments you want to add, you can place them in the textbox below.</p>
-    <label for="comments">Additional Comments</label><br>
-    <textarea 
-    name="comments" 
-    id="comments"
-    placeholder="Enter additional comments here..."
-    rows="10"
-    cols="40"
-    ></textarea>
-    <button id="submit" type="submit">Submit</button>
+            <!-- Question 1 -->
+            <div class="form-group question">
+                <label>1. Which human rights issues are you most concerned about? (Select all that apply)</label>
+                <label class="option-label"><input type="checkbox" name="Q1O1" value="Freedom of Speech">Freedom of Speech</label>
+                <label class="option-label"><input type="checkbox" name="Q1O2" value="Discrimination">Discrimination and inequality</label>
+                <label class="option-label"><input type="checkbox" name="Q1O3" value="Child protection">Child protection</label>
+                <label class="option-label"><input type="checkbox" name="Q1O4" value="Gender violence">Gender based violence</label>
+                <label class="option-label"><input type="checkbox" name="Q1O5" value="Privacy">Privacy and data protection</label>
+                <label class="option-label"><input type="checkbox" name="Q1O6" value="Education">Access to education</label>
+                <label class="option-label"><input type="checkbox" name="Q1O7" value="Healthcare">Access to healthcare</label>
+                <label class="option-label"><input type="checkbox" name="Q1O8" value="Labor rights">Labor rights and fair wages</label>
+            </div>
 
+            <!-- Question 2 -->
+            <div class="form-group question">
+                <label>2. In what ways are you willing to participate in protecting human rights? (Select all that apply)</label>
+                <label class="option-label"><input type="checkbox" name="Q2O1" value="Petitions">Signing petitions</label>
+                <label class="option-label"><input type="checkbox" name="Q2O2" value="Campaigns">Attending awareness campaigns</label>
+                <label class="option-label"><input type="checkbox" name="Q2O3" value="Donations">Donating to human rights organizations</label>
+                <label class="option-label"><input type="checkbox" name="Q2O4" value="Sharing content">Sharing educational content</label>
+                <label class="option-label"><input type="checkbox" name="Q2O5" value="Volunteering">Volunteering for community programs</label>
+                <label class="option-label"><input type="checkbox" name="Q2O6" value="Reporting">Reporting human rights violations</label>
+            </div>
 
+            <!-- Question 3 -->
+            <div class="form-group question">
+                <label>3. What types of support do you think communities need the most? (Select all that apply)</label>
+                <label class="option-label"><input type="checkbox" name="Q3O1" value="Legal assistance">Legal assistance</label>
+                <label class="option-label"><input type="checkbox" name="Q3O2" value="Mental health">Mental health support</label>
+                <label class="option-label"><input type="checkbox" name="Q3O3" value="Financial aid">Financial aid</label>
+                <label class="option-label"><input type="checkbox" name="Q3O4" value="Education programs">Educational programs and workshops</label>
+                <label class="option-label"><input type="checkbox" name="Q3O5" value="Shelters">Safe spaces/shelters</label>
+                <label class="option-label"><input type="checkbox" name="Q3O6" value="Transparency">Government transparency and accountability</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="form-group question">
+                <label>4. How do you prefer to receive information about human rights? (Select all that apply)</label>
+                <label class="option-label"><input type="checkbox" name="Q4O1" value="Social media">Social media posts</label>
+                <label class="option-label"><input type="checkbox" name="Q4O2" value="Articles">News articles</label>
+                <label class="option-label"><input type="checkbox" name="Q4O3" value="Workshops">School or community workshops</label>
+                <label class="option-label"><input type="checkbox" name="Q4O4" value="Announcements">Government announcements</label>
+                <label class="option-label"><input type="checkbox" name="Q4O5" value="Videos">Online videos or documentaries</label>
+                <label class="option-label"><input type="checkbox" name="Q4O6" value="Podcasts">Podcasts or radio programs</label>
+            </div>
+
+            <!-- Additional Comments -->
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" name="comments" placeholder="Enter additional comments here..." rows="6"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button class="btn-submit" type="submit">Submit</button>
         </form>
     </div>
 </body>
